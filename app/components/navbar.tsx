@@ -42,17 +42,20 @@ export default function App() {
 
 			<NavbarContent className='sm:hidden pr-3 ' justify='center'>
 				<NavbarBrand>
-					<Image src='/logo.png' alt='logo' width={20} height={20} />
+					<Image src='/logo.jpeg' alt='logo' width={50} height={50} />
 					<p className='text-lg  '>
-						Watch
+						Drone
 						<span className='class="font-extrabold text-transparent text-lg bg-clip-text bg-gradient-to-r from-orange-300 to-orange-600'>
-							Shop
+							Filming
 						</span>
 					</p>
 				</NavbarBrand>
 			</NavbarContent>
 
 			<NavbarContent className='hidden sm:flex gap-4' justify='center'>
+				<NavbarItem>
+				<Image src='/logo.jpeg' alt='logo' width={50} height={50} />
+				</NavbarItem>
 				<NavbarItem>
 					<Link color='foreground' href='#' className='font-semibold'>
 						Home
