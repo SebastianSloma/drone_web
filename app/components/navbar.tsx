@@ -1,94 +1,142 @@
-'use client'
+'use client';
 
 import React from 'react';
 import {
 	Navbar,
 	NavbarBrand,
+	NavbarMenuToggle,
+	NavbarMenuItem,
+	NavbarMenu,
 	NavbarContent,
 	NavbarItem,
-	NavbarMenuToggle,
-	NavbarMenu,
-	NavbarMenuItem,
 	Link,
 	Button,
+	Input,
 	Image,
 } from '@nextui-org/react';
+import { ThemeSwitcher } from './ThemeSwitcher';
 
-
-export default function NavMenu() {
+export default function App() {
 	const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
-	const menuItems = [
-		'Profile',
-		'Dashboard',
-		'Activity',
-		'Analytics',
-		'System',
-		'Deployments',
-		'My Settings',
-		'Team Settings',
-		'Help & Feedback',
-		'Log Out',
+	interface MenuItem {
+		label: string;
+		href: string;
+	}
+
+	const menuItems: MenuItem[] = [
+		{ label: 'Home', href: '/' },
+		{ label: 'Portfolio', href: '#portfolio' },
+		{ label: 'Offers', href: '#offers' },
+		{ label: 'Testimonials', href: '#testimonials' },
+		{ label: 'Contact', href: '#contact' },
 	];
 
 	return (
-		<Navbar onMenuOpenChange={setIsMenuOpen}>
-			<NavbarContent>
+		<Navbar isBordered isMenuOpen={isMenuOpen} onMenuOpenChange={setIsMenuOpen}>
+			<NavbarContent className='sm:hidden' justify='start'>
 				<NavbarMenuToggle
 					aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
-					className='sm:hidden'
 				/>
+			</NavbarContent>
+
+			<NavbarContent className='sm:hidden pr-3 ' justify='center'>
 				<NavbarBrand>
-				<Image src='logo.jpeg' alt='logo' width={70} />
-					<p className='font-bold text-inherit'>Drone Filming</p>
+					<Image src='/logo.png' alt='logo' width={20} height={20} />
+					<p className='text-lg  '>
+						Watch
+						<span className='class="font-extrabold text-transparent text-lg bg-clip-text bg-gradient-to-r from-orange-300 to-orange-600'>
+							Shop
+						</span>
+					</p>
 				</NavbarBrand>
 			</NavbarContent>
 
 			<NavbarContent className='hidden sm:flex gap-4' justify='center'>
 				<NavbarItem>
-					<Link color='foreground' href='#'>
-						Features
-					</Link>
-				</NavbarItem>
-				<NavbarItem isActive>
-					<Link href='#' aria-current='page'>
-						Customers
+					<Link color='foreground' href='#' className='font-semibold'>
+						Home
 					</Link>
 				</NavbarItem>
 				<NavbarItem>
-					<Link color='foreground' href='#'>
-						Integrations
+					<Link color='foreground' href='#products' className='font-semibold'>
+						Portfolio
+					</Link>
+				</NavbarItem>
+				<NavbarItem>
+					<Link color='foreground' href='#newoffer' className='font-semibold'>
+						Offers
+					</Link>
+				</NavbarItem>
+				<NavbarItem>
+					<Link
+						color='foreground'
+						href='#testimonials'
+						className='font-semibold'>
+						Clients
+					</Link>
+				</NavbarItem>
+				<NavbarItem>
+					<Link color='foreground' href='#contact' className='font-semibold'>
+						About
+					</Link>
+				</NavbarItem>
+				<NavbarItem>
+					<Link color='foreground' href='#contact' className='font-semibold'>
+						Contact
 					</Link>
 				</NavbarItem>
 			</NavbarContent>
+
 			<NavbarContent justify='end'>
 				<NavbarItem className='hidden lg:flex'>
-					<Link href='#'>Login</Link>
-				</NavbarItem>
-				<NavbarItem>
-					<Button as={Link} color='primary' href='#' variant='flat'>
-						Sign Up
-					</Button>
+					<ThemeSwitcher />
 				</NavbarItem>
 			</NavbarContent>
+
 			<NavbarMenu>
 				{menuItems.map((item, index) => (
 					<NavbarMenuItem key={`${item}-${index}`}>
 						<Link
-							color={
-								index === 2
-									? 'primary'
-									: index === menuItems.length - 1
-									? 'danger'
-									: 'foreground'
-							}
 							className='w-full'
-							href='#'
+							color={'foreground'}
+							href={item.href}
 							size='lg'>
-							{item}
+							{item.label}
 						</Link>
 					</NavbarMenuItem>
 				))}
+				<NavbarItem>
+					<Input
+						classNames={{
+							base: 'max-w-full sm:max-w-[10rem] h-10',
+							mainWrapper: 'h-full',
+							input: 'text-small',
+							inputWrapper:
+								'h-full font-normal text-default-500 bg-default-400/20 dark:bg-default-500/20',
+						}}
+						placeholder='Type to search...'
+						size='sm'
+						type='search'
+					/>
+				</NavbarItem>
+
+				<NavbarItem className='sm:flex mt-3'>
+					<Button
+						as={Link}
+						color='warning'
+						href='#'
+						variant='faded'
+						className='mr-5'>
+						Log in
+					</Button>
+					<Button as={Link} color='warning' href='#' variant='ghost'>
+						Sign Up
+					</Button>
+				</NavbarItem>
+				<NavbarItem className='sm:flex mt-5'>
+					<ThemeSwitcher />
+				</NavbarItem>
 			</NavbarMenu>
 		</Navbar>
 	);
