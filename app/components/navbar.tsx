@@ -11,6 +11,7 @@ import {
 	NavbarMenuItem,
 	Link,
 	Button,
+	Image,
 } from '@nextui-org/react';
 
 
@@ -38,8 +39,8 @@ export default function NavMenu() {
 					className='sm:hidden'
 				/>
 				<NavbarBrand>
-				<h1>logo</h1>
-					<p className='font-bold text-inherit'>ACME</p>
+				<Image src='logo.jpeg' alt='logo' width={70} />
+					<p className='font-bold text-inherit'>Drone Filming</p>
 				</NavbarBrand>
 			</NavbarContent>
 
