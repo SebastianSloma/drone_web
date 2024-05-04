@@ -1,5 +1,5 @@
 import { AnimatedPinDemo } from './components/3dpin';
-
+import { HeroScrollDemo } from './components/Hero';
 
 
 export default function Home() {
@@ -8,6 +8,7 @@ export default function Home() {
 
 
 <div>
+  <HeroScrollDemo/>
   <AnimatedPinDemo/>
 </div>
   </div>
