@@ -1,6 +1,7 @@
 import { AnimatedPinDemo } from './components/3dpin';
 import { BentoGridDemo } from './components/bento';
 import { HeroScrollDemo } from './components/Hero';
+import { HeroParallaxDemo } from './components/paralaxsection';
 
 
 export default function Home() {
@@ -11,6 +12,7 @@ export default function Home() {
 <div>
   <HeroScrollDemo/>
   <BentoGridDemo/>
+  <HeroParallaxDemo/>
   <AnimatedPinDemo/>
 </div>
   </div>
