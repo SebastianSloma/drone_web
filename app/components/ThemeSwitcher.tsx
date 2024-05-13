@@ -28,7 +28,7 @@ export function ThemeSwitcher() {
 				onChange={toggleDarkTheme}
 				defaultSelected
 				size='lg'
-				color='warning'
+				color='default'
 				startContent={<SunIcon />}
 				endContent={<MoonIcon />}></Switch>
 		</div>
