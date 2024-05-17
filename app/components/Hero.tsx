@@ -20,8 +20,8 @@ export function HeroScrollDemo() {
 				<Image
 					src={`/herofpv.png`}
 					alt='hero'
-					height={720}
-					width={1400}
+					height={600}
+					width={ 800}
 					className='mx-auto rounded-2xl object-cover h-full object-left-top'
 					draggable={false}
 				/>
