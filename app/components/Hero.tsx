@@ -3,6 +3,7 @@ import React from 'react';
 import { ContainerScroll } from '../components/ui/scrolanimation';
 import Image from 'next/image';
 import { FlipWordsDemo } from './FlipWord';
+import { SparklesPreview } from './Sparcles';
 
 export function HeroScrollDemo() {
 	return (
@@ -15,6 +16,7 @@ export function HeroScrollDemo() {
 							<span className='text-4xl md:text-[6rem] font-bold mt-1 leading-none'>
 								Scroll Animations
 							</span> <br/>
+							<SparklesPreview/>
 							<FlipWordsDemo/>
 						</h1>
 					</>
