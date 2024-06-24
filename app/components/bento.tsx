@@ -50,7 +50,7 @@ const items = [
 		icon: <IconSignature className='h-4 w-4 text-neutral-500' />,
 	},
 	{
-		title: 'The Power of Communication',
+		title: 'Tinywoop',
 		description:
 			'Understand the impact of effective communication in our lives.',
 		header: <Skeleton />,
