@@ -57,7 +57,7 @@ const items = [
 		icon: <IconTableColumn className='h-4 w-4 text-neutral-500' />,
 	},
 	{
-		title: 'The Pursuit of Knowledge',
+		title: 'SpeedyBee',
 		description: 'Join the quest for understanding and enlightenment.',
 		header: <Skeleton />,
 		icon: <IconArrowWaveRightUp className='h-4 w-4 text-neutral-500' />,
