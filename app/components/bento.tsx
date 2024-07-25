@@ -72,6 +72,6 @@ const items = [
 		title: 'fpv',
 		description: 'Embark sson excitijhvng journeys and thrilling discoveries.',
 		header: <Skeleton />,
-		icon: <IconBoxAlignRightFilled className='h-4 w-4 text-neutral-500' />,
+		icon: <IconBoxAlignRightFilled className='h-4 w-4 text-neutral-600' />,
 	},
 ];
