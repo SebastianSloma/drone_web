@@ -70,7 +70,7 @@ const items = [
 	},
 	{
 		title: 'fpv',
-		description: 'Embark sson excitijhvng journexsys and thrilling discoveries.',
+		description: 'Embark sson excitijhvng journexsys and thrggilling discoveries.',
 		header: <Skeleton />,
 		icon: <IconBoxAlignRightFilled className='h-4 w-4 text-neutral-600' />,
 	},
